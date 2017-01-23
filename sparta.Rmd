@@ -1,0 +1,22 @@
+---
+title: "DevelopingDataProducts - Week2 Project"
+author: "FChemin"
+output: html_document
+keep md: yes
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## January 23rd 2017
+
+```{r echo=FALSE}
+library(leaflet)
+```
+
+```{r echo=FALSE}
+df <- data.frame(lng = 22.4237, lat = 37.0821)
+my_map <- df %>% leaflet() %>% addTiles() %>% addMarkers(popup = "THIS IS SPARTA!")
+my_map
+```
