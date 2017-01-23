@@ -17,6 +17,7 @@ library(leaflet)
 
 ```{r echo=FALSE}
 df <- data.frame(lng = 22.4237, lat = 37.0821)
-my_map <- df %>% leaflet() %>% addTiles() %>% addMarkers(popup = "THIS IS SPARTA!")
+sparta_icon <- makeIcon("https://upload.wikimedia.org/wikipedia/en/c/c4/Spartan_Race_logo.png", iconWidth = 31*215/230, iconHeight = 31, iconAnchorX = 31*215/230/2, iconAnchorY = 16)
+my_map <- df %>% leaflet() %>% addTiles() %>% addMarkers(icon = sparta_icon,popup = "THIS IS SPARTA!")
 my_map
 ```
